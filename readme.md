@@ -25,6 +25,10 @@ For more information, [see](https://en.wikipedia.org/wiki/Logistic_regression)
 ### Workign Example
 <img src="https://github.com/akshaybahadur21/BreastCancer_Classification/blob/master/breast_cancer.gif">
 
+###Python  Implementation
+
+<img src="https://github.com/akshaybahadur21/BreastCancer_Classification/blob/master/b_cancer_python.gif">
+
 ### Execution
 To run the code, type `run breast_cancer.m`
 
