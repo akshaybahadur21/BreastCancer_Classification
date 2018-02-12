@@ -25,13 +25,29 @@ For more information, [see](https://en.wikipedia.org/wiki/Logistic_regression)
 ### Workign Example
 <img src="https://github.com/akshaybahadur21/BreastCancer_Classification/blob/master/breast_cancer.gif">
 
-###Python  Implementation
-
-<img src="https://github.com/akshaybahadur21/BreastCancer_Classification/blob/master/b_cancer_python.gif">
-
 ### Execution
 To run the code, type `run breast_cancer.m`
 
 ```
 run breast_cancer.m
 ```
+
+### Python  Implementation
+
+1) Dataset- UCI-ML
+2) I have used 30 features to classify
+3) Instead of 0=benign and 1=malignant, I have used 1=benign and 2=malignant
+
+### Acuracy ~ 92%
+
+<img src="https://github.com/akshaybahadur21/BreastCancer_Classification/blob/master/b_cancer_python.gif">
+
+### Execution
+To run the code, type `python B_Cancer.py`
+
+```
+python B_Cancer.py
+```
+
+
+
