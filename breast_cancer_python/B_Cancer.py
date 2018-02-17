@@ -134,10 +134,18 @@ def model(X_train, Y_train, num_iters=2000, alpha=0.5, print_cost=False):
     w=parameters["w"]
     b=parameters["b"]
 
+    X_test=pd.read_csv("test_cancer_data.csv")
+    X_test=np.array(X_test)
+    X_test=X_test.T
+    Y_test=pd.read_csv("test_cancer_data_y.csv")
+    Y_test=np.array(Y_test)
+    Y_test=Y_test.T
     y_prediction_train=predict(w,b,X_train)
+    y_prediction_test=predict(w,b,X_test)
     print("train accuracy: {} %".format(100 - np.mean(np.abs(y_prediction_train - Y_train)) * 100))
+    print("test accuracy: {} %".format(100 - np.mean(np.abs(y_prediction_test - Y_test)) * 100))
     d = {"costs": costs,
-         #"Y_prediction_test": Y_prediction_test,
+         "Y_prediction_test": y_prediction_test,
          "Y_prediction_train": y_prediction_train,
          "w": w,
          "b": b,
