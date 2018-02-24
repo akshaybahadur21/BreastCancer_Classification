@@ -110,7 +110,6 @@ def predict(w, b, X):
 
     A = sigmoid(np.dot(w.T, X) + b)
 
-
     for i in range(A.shape[1]):
         y_pred[0, i] = 1 if A[0, i] > 0.5 else 0
 
@@ -155,14 +154,18 @@ def model(X_train, Y_train, num_iters=2000, alpha=0.5, print_cost=False):
 
     array_length = len(predList[0])
     for i in range(array_length):
-        if predList[0][i] == 1 & tlist[0][i] == 1:
+        if predList[0][i] == 1 and tlist[0][i] == 1:
             truePositive += 1
-        elif predList[0][i] == 0 & tlist[0][i] == 0:
+        elif predList[0][i] == 0 and tlist[0][i] == 0:
             trueNegative += 1
-        elif predList[0][i] == 0 & tlist[0][i] == 1:
+        elif predList[0][i] == 0 and tlist[0][i] == 1:
             falseNegative += 1
-        else:
+        elif predList[0][i] == 1 and tlist[0][i] == 0 :
             falsePositive += 1
+        else:
+            print(predList[0][i])
+            print(tlist[0][i])
+            print("WTF")
     print("On training set:\nTrue Positive:  ", truePositive)
     print("True Negative:  ", trueNegative)
     print("False Negative:  ", falseNegative)
@@ -179,14 +182,18 @@ def model(X_train, Y_train, num_iters=2000, alpha=0.5, print_cost=False):
 
     array_length = len(predList[0])
     for i in range(array_length):
-        if predList[0][i] == 1 & tlist[0][i] == 1:
+        if predList[0][i] == 1 and tlist[0][i] == 1:
             truePositive += 1
-        elif predList[0][i] == 0 & tlist[0][i] == 0:
+        elif predList[0][i] == 0 and tlist[0][i] == 0:
             trueNegative += 1
-        elif predList[0][i] == 0 & tlist[0][i] == 1:
+        elif predList[0][i] == 0 and tlist[0][i] == 1:
             falseNegative += 1
-        else:
+        elif predList[0][i] == 1 and tlist[0][i] == 0 :
             falsePositive += 1
+        else:
+            print(predList[0][i])
+            print(tlist[0][i])
+            print("WTF")
     print("On Test set:\nTrue Positive:  ", truePositive)
     print("True Negative:  ", trueNegative)
     print("False Negative:  ", falseNegative)
