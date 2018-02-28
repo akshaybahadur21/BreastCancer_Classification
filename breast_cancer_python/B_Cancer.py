@@ -166,12 +166,18 @@ def model(X_train, Y_train, num_iters=2000, alpha=0.5, print_cost=False):
             print(predList[0][i])
             print(tlist[0][i])
             print("WTF")
+    tpr = truePositive / (truePositive + falseNegative) * 100
+    fpr = falsePositive / (falsePositive + trueNegative) * 100
+    precision = truePositive / (truePositive + falsePositive) * 100
     print("On training set:\nTrue Positive:  ", truePositive)
     print("True Negative:  ", trueNegative)
     print("False Negative:  ", falseNegative)
     print("False Positive:  ", falsePositive)
+    print("True Positive Rate / Recall: %.2f" % tpr+str('%'))
+    print("Precision: %.2f" %precision+str('%'))
+    print("False Positive Rate / Fallout: %.2f" %fpr+str('%'))
 
-    print("test accuracy: {} %".format(100 - np.mean(np.abs(y_prediction_test - Y_test)) * 100))
+    print("\ntest accuracy: {} %".format(100 - np.mean(np.abs(y_prediction_test - Y_test)) * 100))
 
     truePositive = 0
     trueNegative = 0
@@ -194,10 +200,16 @@ def model(X_train, Y_train, num_iters=2000, alpha=0.5, print_cost=False):
             print(predList[0][i])
             print(tlist[0][i])
             print("WTF")
+    tpr = truePositive / (truePositive + falseNegative) * 100
+    fpr = falsePositive / (falsePositive + trueNegative) * 100
+    precision = truePositive / (truePositive + falsePositive) * 100
     print("On Test set:\nTrue Positive:  ", truePositive)
     print("True Negative:  ", trueNegative)
     print("False Negative:  ", falseNegative)
     print("False Positive:  ", falsePositive)
+    print("True Positive Rate / Recall: %.2f" % tpr+str('%'))
+    print("Precision: %.2f" %precision+str('%'))
+    print("False Positive Rate / Fallout: %.2f" %fpr+str('%'))
     d = {"costs": costs,
          "Y_prediction_test": y_prediction_test,
          "Y_prediction_train": y_prediction_train,
