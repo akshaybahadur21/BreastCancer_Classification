@@ -20,7 +20,7 @@ The logistic function, also called the sigmoid function was developed by statist
 For more information, [see](https://en.wikipedia.org/wiki/Logistic_regression)
 
 ### Some Notes
-1) Dataset- UCI-ML
+1) Dataset- UCI-ML.
 2) I have used only 2 features out of 32 to classify.
 
 ### Working Example
