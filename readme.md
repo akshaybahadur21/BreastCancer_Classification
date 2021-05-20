@@ -35,7 +35,7 @@ run breast_cancer.m
 
 ### Python Implementation
 
-1) Dataset- UCI-ML
+1) Dataset- UCI-ML.
 2) I have used 30 features to classify
 3) Instead of 0=benign and 1=malignant, I have used 1=benign and 2=malignant
 
